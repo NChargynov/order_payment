@@ -1,0 +1,1 @@
+enum NetworkScheme { http, https }
