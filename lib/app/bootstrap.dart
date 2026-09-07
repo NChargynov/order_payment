@@ -7,7 +7,7 @@ import 'package:order_payment/core/logging/app_bloc_observer.dart';
 
 Future<void> startApplication(BuildConfiguration buildConfiguration) async {
   WidgetsFlutterBinding.ensureInitialized();
-  await configureDependencies(environment: buildConfiguration.type);
+  await configureDependencies(configuration: buildConfiguration);
   if (buildConfiguration.type.isDevelopment) {
     Bloc.observer = AppBlocObserver();
   }
