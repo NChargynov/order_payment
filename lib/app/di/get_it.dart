@@ -1,7 +1,7 @@
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:order_payment/app/di/get_it.config.dart';
-import 'package:order_payment/core/config/build_configuration.dart';
+import 'package:order_payment/app/config/build_configuration.dart';
 
 final GetIt getIt = GetIt.instance;
 

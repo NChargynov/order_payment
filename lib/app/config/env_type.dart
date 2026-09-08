@@ -3,5 +3,4 @@ enum EnvType {
   local;
 
   bool get isDevelopment => this == EnvType.development;
-  bool get isLocal => this == EnvType.local;
 }

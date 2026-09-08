@@ -1,8 +1,8 @@
-import 'package:order_payment/core/config/build_configuration.dart';
-import 'package:order_payment/core/config/env_type.dart';
-import 'package:order_payment/core/config/network_configuration.dart';
-import 'package:order_payment/core/config/network_scheme.dart';
-import 'package:order_payment/core/config/factory/build_configuration_from_env.dart';
+import 'package:order_payment/app/config/build_configuration.dart';
+import 'package:order_payment/app/config/env_type.dart';
+import 'package:order_payment/app/config/network_configuration.dart';
+import 'package:order_payment/app/config/network_scheme.dart';
+import 'package:order_payment/app/config/factory/build_configuration_from_env.dart';
 
 final class BuildConfigurationFromEnvImpl implements BuildConfigurationFromEnv {
   BuildConfigurationFromEnvImpl({required this.envType});
@@ -15,7 +15,7 @@ final class BuildConfigurationFromEnvImpl implements BuildConfigurationFromEnv {
     EnvType.development => BuildConfiguration(
       type: envType,
       networkConfiguration: const NetworkConfiguration(
-        host: 'api.mbank.payment.kg', // dev url
+        host: 'payment.free.beeceptor.com', // dev url
         scheme: NetworkScheme.https,
       ),
     ),

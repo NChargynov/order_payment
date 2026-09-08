@@ -47,6 +47,21 @@ dependencies:
 
   #логирование
   talker_flutter: ^5.1.20
+  talker_dio_logger: ^5.1.20
+  talker_bloc_logger: ^5.1.20
+
+  #? Image
+  flutter_svg: ^2.3.0
+  flutter_gen_runner: ^5.15.0
+
+  fpdart: ^1.2.0
+  equatable: ^2.1.0
+
+  # Network
+  dio: ^5.11.1
+
+  # Input formatting
+  mask_text_input_formatter: ^2.9.0
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +87,13 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/icons/
+    - assets/images/
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter.ttf
 
   # To add assets to your application, add an assets section, like this:
   # assets:

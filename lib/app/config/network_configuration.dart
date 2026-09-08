@@ -1,4 +1,4 @@
-import 'package:order_payment/core/config/network_scheme.dart';
+import 'package:order_payment/app/config/network_scheme.dart';
 
 final class NetworkConfiguration {
   const NetworkConfiguration({
@@ -13,5 +13,5 @@ final class NetworkConfiguration {
 
   String get _portStr => port == null ? '' : ':$port';
 
-  String get url => '${scheme.name}://$host$_portStr/api/';
+  String get url => '${scheme.name}://$host$_portStr/';
 }

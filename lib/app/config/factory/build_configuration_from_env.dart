@@ -1,5 +1,5 @@
-import 'package:order_payment/core/config/build_configuration.dart';
-import 'package:order_payment/core/config/env_type.dart';
+import 'package:order_payment/app/config/build_configuration.dart';
+import 'package:order_payment/app/config/env_type.dart';
 
 abstract class BuildConfigurationFromEnv {
   const BuildConfigurationFromEnv({required this.envType});
