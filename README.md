@@ -50,6 +50,25 @@ static const _developmentBaseUrl = 'https://api.example.com/api/';
 flutter run -t lib/main_development.dart
 ```
 
+### Android Studio
+
+В Run/Debug Configurations создайте две Flutter-конфигурации. В поле
+**Dart entrypoint** выберите `lib/main_local.dart` или `lib/main_development.dart`.
+
+<details>
+<summary>Настройка local</summary>
+
+<img src="docs/screenshots/android-studio-local.png" width="800" alt="Android Studio: конфигурация запуска main_local.dart">
+
+</details>
+
+<details>
+<summary>Настройка development</summary>
+
+<img src="docs/screenshots/android-studio-development.png" width="800" alt="Android Studio: конфигурация запуска main_development.dart">
+
+</details>
+
 ## Переключение источника данных
 
 Источник выбирается через `EnvType` в entrypoint: `local` — mock,
@@ -86,7 +105,3 @@ flutter test
 ## Repository
 
 [GitHub — NChargynov/order_payment](https://github.com/NChargynov/order_payment)
-
-![img.png](img.png)
-
-![img_1.png](img_1.png)
