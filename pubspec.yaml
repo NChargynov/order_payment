@@ -42,18 +42,19 @@ dependencies:
   # Bloc
   flutter_bloc: ^9.1.1
 
-  #навигация
+  # routes
   auto_route: ^11.1.0
 
-  #логирование
+  # logger
   talker_flutter: ^5.1.20
   talker_dio_logger: ^5.1.20
   talker_bloc_logger: ^5.1.20
 
-  #? Image
+  # Image
   flutter_svg: ^2.3.0
   flutter_gen_runner: ^5.15.0
 
+  # Functional types and equality
   fpdart: ^1.2.0
   equatable: ^2.1.0
 
@@ -62,6 +63,7 @@ dependencies:
 
   # Input formatting
   mask_text_input_formatter: ^2.9.0
+  intl: ^0.20.3
 
 dev_dependencies:
   flutter_test:

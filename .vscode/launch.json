@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Order payment (local)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_local.dart"
+    },
+    {
+      "name": "Order payment (development)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_development.dart"
+    }
+  ]
+}

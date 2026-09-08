@@ -80,17 +80,17 @@ class _PaymentView extends StatelessWidget {
               PaymentOrderRequested(state.orderId),
             ),
           ),
-          OrderStatus.ready => PaymentContent(state: state),
-        },
-        bottomNavigationBar:
-            state.orderStatus == OrderStatus.ready &&
-                MediaQuery.viewInsetsOf(context).bottom == 0
-            ? PaymentFooter(
+          OrderStatus.ready => Column(
+            children: [
+              Expanded(child: PaymentContent(state: state)),
+              PaymentFooter(
                 state: state,
                 onPay: () =>
                     context.read<PaymentBloc>().add(const PaymentSubmitted()),
-              )
-            : null,
+              ),
+            ],
+          ),
+        },
       ),
     ),
   );

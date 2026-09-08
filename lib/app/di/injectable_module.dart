@@ -23,7 +23,7 @@ abstract class InjectableModule {
   Dio dio(BuildConfiguration configuration, TalkerDioLogger talkerDioLogger) {
     final Dio dio = Dio(
       BaseOptions(
-        baseUrl: configuration.networkConfiguration.url,
+        baseUrl: configuration.networkConfiguration.baseUrl,
         headers: {"Content-Type": "application/json"},
         responseType: ResponseType.json,
       ),
