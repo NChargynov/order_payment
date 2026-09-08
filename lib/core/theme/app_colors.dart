@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 final class AppColors {
   static const Color onSurface = Color(0xFFFFFFFF);
   static const Color surface = Color(0xFFF8F8FB);
-  static const Color input = Color(0xFFF3F4F6);
   static const Color primary = Color(0xFF2738ED);
-  static const Color disabled = Color(0xFFC2C4C8);
   static const Color error = Color(0xFFEF4444);
   static const Color success = Color(0xFF21875B);
   static const Color textPrimary = Color(0xFF000000);

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:order_payment/core/theme/app_styles.dart';
 import 'package:order_payment/core/theme/app_colors.dart';
+import 'package:order_payment/core/widgets/app_divider.dart';
 import 'package:order_payment/features/order_payment/domain/entities/payment_method.dart';
 import 'package:order_payment/features/order_payment/presentation/bloc/payment_bloc.dart';
 import 'package:order_payment/features/order_payment/presentation/bloc/payment_event.dart';
@@ -74,10 +75,7 @@ class PaymentMethodSheet extends StatelessWidget {
                   ],
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 8),
-                child: Divider(height: 1, thickness: 1, color: AppColors.gray),
-              ),
+              const AppDivider(color: AppColors.gray),
               for (final method in methods) ...[
                 PaymentMethodTile(
                   key: ValueKey('method-${method.name}'),

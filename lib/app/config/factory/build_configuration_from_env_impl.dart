@@ -7,6 +7,9 @@ import 'package:order_payment/app/config/factory/build_configuration_from_env.da
 final class BuildConfigurationFromEnvImpl implements BuildConfigurationFromEnv {
   BuildConfigurationFromEnvImpl({required this.envType});
 
+  static const _developmentBaseUrl = 'payment.test.com/api'; //dev url
+  static const _localBaseUrl = '';
+
   @override
   final EnvType envType;
 
@@ -15,14 +18,14 @@ final class BuildConfigurationFromEnvImpl implements BuildConfigurationFromEnv {
     EnvType.development => BuildConfiguration(
       type: envType,
       networkConfiguration: const NetworkConfiguration(
-        host: 'payment.free.beeceptor.com', // dev url
+        host: _developmentBaseUrl,
         scheme: NetworkScheme.https,
       ),
     ),
     EnvType.local => BuildConfiguration(
       type: envType,
       networkConfiguration: const NetworkConfiguration(
-        host: '', // empty
+        host: _localBaseUrl,
         scheme: NetworkScheme.https,
       ),
     ),

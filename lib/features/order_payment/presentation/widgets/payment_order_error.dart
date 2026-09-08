@@ -24,7 +24,7 @@ class PaymentOrderError extends StatelessWidget {
           const Text(
             'Не удалось загрузить заказ',
             textAlign: TextAlign.center,
-            style: AppStyles.title,
+            style: AppStyles.titleSemiBold,
           ),
           const SizedBox(height: 8),
           Text(message, textAlign: TextAlign.center, style: AppStyles.textSemiBold),

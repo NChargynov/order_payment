@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:order_payment/core/theme/app_styles.dart';
-import 'package:order_payment/core/theme/app_colors.dart';
+import 'package:order_payment/core/widgets/app_card.dart';
 import 'package:order_payment/core/widgets/app_text_field.dart';
 import 'package:order_payment/gen/assets.gen.dart';
 
@@ -53,12 +53,8 @@ class _PaymentPhoneFieldState extends State<PaymentPhoneField> {
   }
 
   @override
-  Widget build(BuildContext context) => Container(
+  Widget build(BuildContext context) => AppCard(
     padding: const EdgeInsets.all(16),
-    decoration: BoxDecoration(
-      color: AppColors.onSurface,
-      borderRadius: BorderRadius.circular(16),
-    ),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

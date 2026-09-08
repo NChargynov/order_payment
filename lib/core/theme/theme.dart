@@ -8,7 +8,7 @@ final ThemeData theme = ThemeData(
     bodyMedium: TextStyle(
       fontFamily: 'Inter',
       color: AppColors.textPrimary,
-      letterSpacing: -.24,
+      letterSpacing: -0.2,
     ),
   ),
   appBarTheme: const AppBarThemeData(backgroundColor: AppColors.onSurface),

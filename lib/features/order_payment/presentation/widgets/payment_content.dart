@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:order_payment/core/theme/app_styles.dart';
-import 'package:order_payment/core/theme/app_colors.dart';
+import 'package:order_payment/core/widgets/app_card.dart';
 import 'package:order_payment/features/order_payment/domain/entities/payment_method.dart';
 import 'package:order_payment/features/order_payment/presentation/bloc/payment_bloc.dart';
 import 'package:order_payment/features/order_payment/presentation/bloc/payment_event.dart';
@@ -27,14 +27,10 @@ class PaymentContent extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.only(top: 16, bottom: 16),
       children: [
-        Container(
+        AppCard(
           padding: EdgeInsets.symmetric(
             horizontal: state.method == PaymentMethod.account ? 16 : 8,
             vertical: state.method == PaymentMethod.account ? 8 : 4,
-          ),
-          decoration: BoxDecoration(
-            color: AppColors.onSurface,
-            borderRadius: BorderRadius.circular(16),
           ),
           child: PaymentMethodTile(
             key: const ValueKey('payment-method-selector'),

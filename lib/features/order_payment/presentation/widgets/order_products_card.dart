@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:order_payment/core/theme/app_styles.dart';
 import 'package:order_payment/core/theme/app_colors.dart';
+import 'package:order_payment/core/widgets/app_card.dart';
+import 'package:order_payment/core/widgets/app_divider.dart';
 import 'package:order_payment/features/order_payment/domain/entities/order_product_entity.dart';
 
 import 'money_text.dart';
@@ -11,12 +13,8 @@ class OrderProductsCard extends StatelessWidget {
   final List<OrderProductEntity> products;
 
   @override
-  Widget build(BuildContext context) => Container(
+  Widget build(BuildContext context) => AppCard(
     padding: const EdgeInsets.all(8),
-    decoration: BoxDecoration(
-      color: AppColors.onSurface,
-      borderRadius: BorderRadius.circular(16),
-    ),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -66,9 +64,8 @@ class _ProductTile extends StatelessWidget {
           total: product.total,
         ),
         for (final ingredient in product.extraIngredients) ...[
-          const Padding(
+          const AppDivider(
             padding: EdgeInsets.symmetric(horizontal: 8),
-            child: Divider(height: 1, thickness: 1, color: AppColors.border),
           ),
           _ProductLine(
             name: 'Дополнительно: ${ingredient.name}',

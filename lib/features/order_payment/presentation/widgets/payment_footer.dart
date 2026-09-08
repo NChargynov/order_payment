@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:order_payment/core/theme/app_styles.dart';
 import 'package:order_payment/core/theme/app_colors.dart';
 import 'package:order_payment/core/widgets/app_button.dart';
+import 'package:order_payment/core/widgets/app_divider.dart';
 import 'package:order_payment/features/order_payment/domain/entities/payment_method.dart';
 import 'package:order_payment/features/order_payment/presentation/bloc/payment_state.dart';
 
@@ -57,10 +58,7 @@ class PaymentFooter extends StatelessWidget {
               ),
               SizedBox(height: 2),
               _AmountLine(label: 'Доставка', amount: order.deliveryCost),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 8),
-                child: Divider(height: 0.5, color: AppColors.border),
-              ),
+              const AppDivider(height: 0.5, thickness: null),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
